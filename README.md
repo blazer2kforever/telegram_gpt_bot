@@ -1,26 +1,28 @@
-# Telegram-бот с GPT-3
+# Telegram bot with GPT-3
 
-## Описание:
+Russian README version: [![ru](https://img.shields.io/badge/lang-ru-green.svg)](https://github.com/blazer2kforever/telegram_gpt_bot/blob/main/README.ru.md)
 
-Пример очень простого телеграм-бота, использующего API от OpenAI для ответа пользователю.
+## Description:
 
-Скриншот:
-![Скриншот работы бота](https://i.imgur.com/H3WFmVA.jpg "Вот так это работает")
+This is an example of a simple Telegram bot that uses the OpenAI API to respond to users' questions.
 
-## Что используется:
+Screenshot(russian):
+![Screenshot of bot working](https://i.imgur.com/H3WFmVA.jpg "That's how it works")
+
+## Dependencies:
 
 - Python3;
-- Библиотеки [aiogram](https://github.com/aiogram/aiogram) и [openai](https://openai.com/blog/openai-api);
+- Libraries [aiogram](https://github.com/aiogram/aiogram) and [openai](https://openai.com/blog/openai-api);
 
-## Функционал:
+## Functionality:
 
-- Бот отвечает на вопрос пользователя ответом модели GPT;
-- Есть "база данных" – история сообщений для каждого пользователя. Благодаря ей модель "помнит", о чём шла речь в предыдущих запросах/ответах;
-- Реализована простенькая "админка" в терминале для просмотра истории сообщений;
+- The bot responds to the user's question with an answer from the GPT model;
+- A "database" is created to store a message history for each user. This allows the model to remember what was discussed in previous requests/responses;
+- A simple "admin" console has been implemented in the terminal to view message history;
 
-## Как запустить:
+## How to run:
 
-Для корректной работы требуется Python актуальной версии и соответствующие библиотеки.
+To run the bot, you need to have the latest version of Python installed, as well as the following libraries:
 
 ```bash
 pip3 install aiogram
@@ -30,43 +32,41 @@ pip3 install aiogram
 pip3 install openai
 ```
 
-Также потребуются API-ключи Telegram и OpenAI.
+You will also need to obtain API keys for both Telegram and OpenAI.
 
-Ключ для телеграм получается с помощью бота @BotFather, а для OpenAI – платно на [их сайте](https://platform.openai.com).
+The key for Telegram can be obtained from the @BotFather bot, and the key for OpenAI is paid and can be obtained on [their website](https://platform.openai.com).
 
-В _setup.py_ ключи задаются в соответствующие константы:
+In _setup.py_, the keys are set as constants:
 
 ```python
-TELEGRAM_API = 'ВАШ_КЛЮЧ_TELEGRAM'
-OPENAI_API = 'ВАШ_КЛЮЧ_OPENAI'
+TELEGRAM_API = 'YOUR_TELEGRAM_KEY'
+OPENAI_API = 'YOUR_OPENAI_KEY'
 ```
 
-Запуск производится стандартным способом.
+Program is launched in the usual way.
 
 ```bash
 python3 run.py
 ```
 
-## Как настроить:
+## Configuration:
 
-Основные параметры – это _AI_MODEL_ и _GPT_ROLE_ в _gpt_client.py_
+The main configuration options are set in _gpt_client.py_ and include the _AI_MODEL_ and _GPT_ROLE_.
 
-Здесь устанавливается версия модели.
+The _AI_MODEL_ specifies the version of the GPT model to be used:
 
 ```python
 AI_MODEL = 'gpt-3.5-turbo'
 ```
 
-Здесь – "роль" ассистента.
+The _GPT_ROLE_ specifies the "role" of the bot:
 
 ```python
-GPT_ROLE = 'Ты – искусственный интеллект Маркус.'
+GPT_ROLE = 'You are an artificial intelligence named Marcus.'
 ```
 
-Подробнее об этом можно почитать [тут](https://platform.openai.com/docs/api-reference).
+More information on these options can be found in the [OpenAI API documentation](https://platform.openai.com/docs/api-reference).
 
-## Варианта использования:
+## Potential Use Cases:
 
-Связку Telegram-GPT потенциально можно использовать в коммерческих ботах и чатах.
-
-Конкретно этому примеру требуется рефакторинг кода и добавление функций автоматизации и т.д.
+The Telegram-GPT combination has potential applications in commercial bots and chats. However, this example requires code refactoring and the addition of automation functions, among other things.

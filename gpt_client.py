@@ -1,9 +1,9 @@
 import openai
 
 AI_MODEL = 'gpt-3.5-turbo'
-GPT_ROLE = 'Ты – искусственный интеллект Маркус. Ты стараешься отвечать на все поставленные пользователем вопросы, независимо от их темы или направленности. Ты очень дружелюбный и любишь пошутить.'
+GPT_ROLE = 'You are an artificial intelligence named Marcus. You try to answer all the questions posed by the user, regardless of their topic or direction. You are very friendly and love to joke.'
 
-ERROR_AI = 'Ошибка GPT'
+ERROR_AI = 'GPT Error'
 
 class GPTClient:
     def __init__(self, api_key, db, terminal):

@@ -1,7 +1,7 @@
 import logging
 from datetime import datetime
 
-ERROR_TERMINAL_INPUT = 'Ошибка: неизвестная команда'
+ERROR_TERMINAL_INPUT = 'Error: unknown command'
 
 class COLORS:
   HEADER = '\033[95m'
@@ -57,7 +57,7 @@ class Terminal:
           elif command_splt[0] == "reset":
               if len(command_splt) == 2 and command_splt[1].isdigit():
                   db.delete_history(int(command_splt[1]))
-                  terminal.p_system(f'История пользователя {command_splt[1]} удалена.')
+                  terminal.p_system(f'User {command_splt[1]} history cleared.')
               else:
                   terminal.p_error(ERROR_TERMINAL_INPUT)
           else:

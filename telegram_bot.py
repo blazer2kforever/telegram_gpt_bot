@@ -2,15 +2,15 @@ from aiogram import Bot, Dispatcher, executor, types
 
 MAX_MESSAGE_LENGTH = 4096
 
-START_MSG = 'Привет!🙌\nЯ – Маркус😇\Можешь задавать свой вопроc🙃'
-RESET_MSG = 'История переписки очищена🗑️'
+START_MSG = 'Hello!🙌\nI am Marcus😇\nYou can ask me a question🙃'
+RESET_MSG = 'Chat history cleared🗑️'
 
-INFO_START_POLLING = 'Диспетчер запущен'
-INFO_LENGTH_NORMAL = 'Длина сообщения нормальная'
-INFO_LENGTH_EXCEEDED = 'Длина сообщения превышена'
-INFO_AI = 'GPT в процессе'
+INFO_START_POLLING = 'Dispatcher started polling'
+INFO_LENGTH_NORMAL = 'Response length is normal'
+INFO_LENGTH_EXCEEDED = 'Response length exceeded'
+INFO_AI = 'GPT in process'
 
-ERROR_MSG = 'Что-то пошло не так...🤨'
+ERROR_MSG = 'Something went wrong...🤨'
 
 class TelegramBot:
     def __init__(self, api_key, gpt, db, terminal):

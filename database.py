@@ -2,17 +2,17 @@ import sqlite3
 from sqlite3 import Error
 from datetime import datetime
 
-INFO_SQL_CONNECT = 'Подключение SQL'
-INFO_SQL_CREATE_TABLE = 'Создание таблицы SQL'
-INFO_SQL_INSERT = 'Выполнение SQL INSERT'
-INFO_SQL_DELETE = 'Выполнение SQL DELETE'
-INFO_SQL_GET = 'Выполнение SQL GET'
+INFO_SQL_CONNECT = 'Connecting SQL'
+INFO_SQL_CREATE_TABLE = 'Creating SQL table'
+INFO_SQL_INSERT = 'Proceeding SQL INSERT'
+INFO_SQL_DELETE = 'Proceeding SQL DELETE'
+INFO_SQL_GET = 'Proceeding SQL GET'
 
-ERROR_SQL_CONNECT = 'Невозможно установить соединение с SQL'
-ERROR_SQL_CREATE_TABLE = 'Невозможно создать SQL таблицу'
-ERROR_SQL_INSERT = 'Невозможно выполнить SQL INSERT'
-ERROR_SQL_DELETE = 'Невозможно выполнить SQL DELETE'
-ERROR_SQL_GET = 'Невозможно выполнить SQL SELECT'
+ERROR_SQL_CONNECT = 'Cant connect to SQL'
+ERROR_SQL_CREATE_TABLE = 'Cant create SQL table'
+ERROR_SQL_INSERT = 'Cant proceed SQL INSERT'
+ERROR_SQL_DELETE = 'Cant proceed SQL DELETE'
+ERROR_SQL_GET = 'Cant proceed SQL SELECT'
 
 class Database:
   def __init__(self, db_name, terminal):
